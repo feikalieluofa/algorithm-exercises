@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function plusOne(digits){
+			let num = 0;
+			let newDigits = []
+			for (let i = 0; i < digits.length; i++) {
+				num += digits[i] * Math.pow(10, digits.length - i - 1)
+			}
+			let newNum = num + 1
+			console.log(newNum)
+			while (newNum > 10 || newNum == 10) {
+				newDigits.unshift(newNum % 10)
+				newNum = Math.floor(newNum / 10)
+			}
+			newDigits.unshift(newNum)
+			return newDigits;
+			};
+			console.log(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,6,6,2,8]))
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
